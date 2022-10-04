@@ -4,34 +4,29 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
+	int answer = 59;
 	int x;
-	int y;
-	char op;
-	int result;
+	int num=0;
 	
-	//두개의 입력 정수, 한 개의 연산자 문자 입력 받기 
-	printf("enter the calculation. :\n");
-	scanf("%d %c %d", &x, &op, &y);
-	
-	//연산자에 따라 결과값을 ㄱ계산(result에 저장)
-	if(op=='+') //+인 경우
-		result=x+y;
-	else if(op=='-')
-		result=x-y;
-	else if(op=='*')
-		result=x*y;
-	else if(op=='/')
-		result=x/y;
-	/*
-	switch(op)
+	do
 	{
-		case '+' :
-			result=x+y;
-			break
+	printf("input number");	//입력하라 문구 출력
+	scanf("%d", &x);//입력을 받음
+    num++;
+	if(x>answer)
+		printf("low!\n");
+	else if(x<answer)
+		printf("high!\n");
+	
+		 	//입력 숫자가 정답보다 큰지 작은지 출력 
 	}
-	*/
-	//printf로 출력
-	printf("=%i",result);
-	
-	
+	while(x!=answer);
+	{
+	printf("Congratulation!\n");
+	printf("Number of trial =%i\n",num);//시도 횟수 출력 
+	}
+
+	return 0;
 }
+	
+
