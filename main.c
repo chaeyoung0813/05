@@ -4,19 +4,18 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int j;
-	printf("정수 하나를 입력하시오");
-	scanf("%i",&j);
-	if(j<0)
-	{
-		j=-j;
-		printf("절대값은%i입니다.",j);
+	char c;
+	int num=0;
 	
-	}
-	else
+	printf("문자열을 입력하세요. : \n");
+	
+	while((c=getchar())!='\n') //입력문자가 개행문자가 나올 때까지반복 
 	{
-		printf("절대값은%i입니다.",j);
+		
+		if(c>='0'&&c<='9')//입력된 글자(c)가 숫자인가?
+			num=num+1;//그렇다면 num에 하나를 센다. 
 	}
 	
+	printf("숫자의 개수는 %i개입니다.\n",num); //출력 
 	return 0;
 }
